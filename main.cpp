@@ -5,7 +5,7 @@
 #include <boost/thread.hpp>
 
 int g_port = 45455;
-int g_port1 = 1241; //If you want to open 2 apps on 1 pc
+//int g_port1 = 1241; //If you want to open 2 apps on 1 pc
 
 class Messenger
 {
@@ -30,7 +30,7 @@ public:
 		}
 		if(!get_connected())
 		{
-			sock.connect(boost::asio::ip::tcp::endpoint(reciever_addr,g_port1),err);
+			sock.connect(boost::asio::ip::tcp::endpoint(reciever_addr,g_port),err);
 			if(err)
 			{
 				listen();
